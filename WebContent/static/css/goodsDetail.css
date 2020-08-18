@@ -1,0 +1,183 @@
+@CHARSET "UTF-8";
+
+#Outer {
+	width: 1200px;
+	margin: auto;
+}
+/* 第一层 */
+#lay1 {
+	width: 1200px;
+	height: 50px;
+	background: RGB(51, 51, 51);
+}
+
+#lay1 .lay1_1 {
+	height: 50px;
+	width: 250px;
+	margin-left: 60px;
+	float: left;
+	line-height: 45px;
+	color: white;
+}
+
+#lay1 .lay1_2 {
+	height: 50px;
+	width: 160px;
+	background: red;
+	margin-right: 70px;
+	float: right;
+	text-align: center;
+	line-height: 45px;
+	font-size: 20px;
+	color: white;
+}
+
+#lay1 .lay1_3 {
+	height: 50px;
+	width: 160px;
+	margin-right: 20px;
+	float: right;
+	line-height: 45px;
+	color: white;
+}
+/* 第二层 */
+#lay2 {
+	height: 80px;
+	width: 1200px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+#lay2 .lay2_1 {
+	height: 80px;
+	width: 80px;
+	margin-left: 40px;
+	float: left;
+}
+
+#lay2 .lay2_1 img {
+	width: 80px;
+	height: 80px;
+}
+
+#lay2 .lay2_3 {
+	width: 300px;
+	height: 40px;
+	margin-right: 5px;
+	float: right;
+	margin-top: 20px;
+}
+
+#lay2 .lay2_2 {
+	width: 116px;
+	height: 46px;
+	margin-top: 10px;
+	margin-right: 20px;
+	float: right;
+}
+
+#lay2 .lay2_2 img {
+	width: 116px;
+	height: 46px;
+}
+/* 第三层 */
+#lay3 {
+	width: 1200px;
+	height: 40px;
+	background: RGB(245, 245, 245);
+	line-height: 40px;
+	color: RGB(51, 122, 183);
+}
+
+#lay4 {
+	width: 1200px;
+	height: 400px;
+	margin-top: 20px;
+}
+
+#lay4 .lay4_1 {
+	width: 400px;
+	height: 400px;
+	float: left;
+	margin-left: 106px;
+}
+
+#lay4 .lay4_1 a {
+	width: 300px;
+	height: 300px;
+	padding-left:50px;
+}
+#lay4 .lay4_1 .a img {
+	width: 300px;
+	height: 300px;
+	padding-left:0px;
+	margin-left:50px;
+}
+#lay4 .lay4_1 .b {
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+#lay4 .lay4_1 .b img {
+	width: 100px;
+	height: 100px;
+	padding-left:0px;
+}
+
+#lay4 .lay4_2 {
+	width: 400px;
+	height: 400px;
+	float: right;
+	margin-right: 190px;
+}
+
+#lay4 .lay4_2_1 {
+	width: 400px;
+	height: 40px;
+	background: RGB(245, 245, 245);
+	line-height: 30px;
+}
+
+#lay4 .lay4_2_2 {
+	width: 398px;
+	height: 260px;
+	border: 1px RGB(223, 240, 216) solid;
+}
+
+#lay4 .lay4_2_3 {
+	width: 398px;
+	height: 100px;
+	border: 1px RGB(223, 240, 216) solid;
+	border-top: 0px;
+}
+
+#lay4 .lay4_2_3_1 {
+	width: 120px;
+	margin-left: 20px;
+	height: 40px;
+	background: RGB(240, 173, 78);
+	float: left;
+	text-align: center;
+	line-height: 40px;
+	margin-top: 25px;
+}
+
+#lay4 .lay4_2_3_2 {
+	width: 100px;
+	margin-left: 20px;
+	height: 40px;
+	background: RGB(217, 83, 79);
+	color: white;
+	float: left;
+	text-align: center;
+	line-height: 40px;
+	margin-top: 25px;
+}
+
+#lay5 {
+	width: 1200px;
+	margin-top: 40px;
+	font-size: 15px;
+	margin-top: 106px;
+	text-align: center;
+}

@@ -1,0 +1,90 @@
+#outer {
+	width: 1500px;
+	margin: auto;
+	border: 1px solid #f00;
+}
+
+#lay1 {
+	width: 1300px;
+	height: 40px;
+	padding-left: 100px;
+	padding-right: 100px;
+	background-color: #333333;
+	float: left;
+}
+
+#lay1 .a{
+	margin-top: 10px;
+	color: #CCCCCC;
+	float: left;
+}
+
+#lay1 .b{
+	margin-top: 10px;
+	margin-right: 5px;
+	color: #CCCCCC;
+	float: right;
+}
+
+#lay1 .c{
+	margin-left: 20px;
+	padding: 10px;
+	background-color: #f00;
+	color: #CCCCCC;
+	float: right;
+}
+
+#lay3 {
+	padding-top: 65px;
+	width: 1500px;
+	height: 130px;
+	font-size: 15px;
+	text-align: center;
+	background-color: #FAFAFA;
+	float: left;
+}
+
+#lay3 .a{
+	margin-bottom: 10px;
+	color: #333333;
+}
+
+#lay3 .b{
+	color: #333333;
+}
+
+#lay2 {
+	width: 1300px;
+	height: 460px;
+	padding-left: 100px;
+	padding-right: 100px;
+	background-color: #ffffff;
+	float: left;
+	border: 1px solid #f00;
+}
+
+#lay2 .x{
+	width: 1300px;
+	height: 100px;
+	float: left;
+}
+
+#lay2 .a img{
+	margin-top: 30px;
+	float: left;
+}
+
+#lay2 .b img{
+	height: 40px;
+	margin-top: 35px;
+	float: right;
+}
+
+#lay2 .b input{
+	width: 300px;
+	height: 25px;
+	margin-right: 5px;
+	margin-top: 40px;
+	float: right;
+}
+

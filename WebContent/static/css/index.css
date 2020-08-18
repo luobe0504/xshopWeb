@@ -1,0 +1,172 @@
+@CHARSET "UTF-8";
+#mc{
+	width:1200px;
+	height:400px;
+	
+	position:absolute;
+	margin-left: 122px;
+	margin-top:50px;	
+}
+#mc .circle{
+	width:30px;
+	height:30px;
+	background-color:#fff;
+	border-radius:15px;/*圆角属性*/
+	font-size:12px;
+	text-align:center;
+	line-height:30px;
+	position:relative;
+}
+#show_outer {
+	margin: auto;
+	width: 1200px;
+}
+
+#show_lay1 {
+	width: 1200px;
+	height: 40px;
+}
+
+#show_lay1 .a {
+	width: 70px;
+	height: 40px;
+	float: left;
+}
+
+#show_lay1 .a img {
+	height: 40px;
+}
+
+#show_lay1 .b {
+	width: 200px;
+	margin-left: 690px;
+	padding-top: 5px;
+	height: 33px;
+}
+
+#show_lay1 .b input {
+	width: 200px;
+	height: 25px;
+}
+
+#show_lay1 .c {
+	width: 150px;
+	margin-left: 20px;
+}
+
+#show_lay2 {
+	width: 1200px;
+	height: 400px;
+	margin-top: 10px;
+	background:#cc0;
+	overflow:hidden;
+}
+#show_lay2_inner{
+	width: 12000px;
+	height: 400px;
+	background:#fcc;
+	
+}
+#show_lay2_inner .pic {
+	width: 1200px;
+	height: 400px;
+	float:left;
+}
+#show_lay2_inner img {
+	width: 1200px;
+	height: 400px;
+}
+
+#show_lay3 {
+	width: 1200px;
+	height: 200px;
+}
+
+#show_lay3 .a {
+	float: left;
+	width: 300px;
+	height: 200px;
+}
+
+#show_lay3 .a .pic {
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+
+#show_lay3 .a .pic img {
+	width: 100px;
+	height: 100px;
+}
+
+#show_lay3 .a img {
+	width: 300px;
+	height: 200px;
+}
+
+#show_font {
+	width: 1190px;
+	height: 30px;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 40px;
+	padding-left: 10px;
+}
+
+#show_lay4 {
+	width: 1200px;
+	height: 300px;
+}
+
+#show_lay4 .a {
+	float: left;
+	width: 240px;
+	height: 295px;
+    font-size: 12px;
+    text-align: center;
+}
+
+#show_lay4 .a .a1 {
+	border-top: #f00 5px solid;
+}
+
+#show_lay4 .a .a2 {
+	border-top: #0f0 5px solid;
+}
+
+#show_lay4 .a .a3 {
+	border-top: #00f 5px solid;
+}
+
+#show_lay4 .a .a4 {
+	border-top: #f23 5px solid;
+}
+
+#show_lay4 .a .a5 {
+	border-top: #0f6 5px solid;
+}
+
+#show_lay4 .a div {
+	margin: auto;
+}
+
+#show_lay4 .a .pic {
+	width: 220px;
+	height: 230px;
+}
+
+#show_lay4 .a .pic img {
+	width: 220px;
+	height: 230px;
+}
+
+#show_lay4 .a .info {
+	width: 230px;
+	height: 30px;
+	line-height: 30px;
+}
+
+#show_lay4 .a .brand {
+	width: 230px;
+	height: 15px;
+}

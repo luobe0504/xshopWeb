@@ -1,0 +1,48 @@
+#outer {
+	width: 1200px;
+	height: 670px;
+	margin: auto;
+	margin-top: 100px;
+	padding-left: 100px;
+	padding-right: 100px;
+	background-color: #ffffff;
+}
+
+#lay1 {
+	width: 1200px;
+	margin-top: 30px;
+	border-bottom: 2px solid #FF6700;
+	float: left;
+}
+#lay1 .a{
+	font-size: 30px;
+	margin-bottom: 30px;
+	float: left;
+}
+#lay1 .b{
+	font-size: 20px;
+	color: #FF6700;
+	float: right;
+}
+#lay2 {
+	width: 1200px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-size: 50px;
+	float: left;
+}
+#lay3 input{
+	width: 100px;
+	height: 40px;
+	margin-right: 10px;
+	font-size: 20px;
+	background-color: #D9534F;
+	float: left;
+}
+#lay4 input{
+	width: 100px;
+	height: 40px;
+	margin-right: 10px;
+	font-size: 20px;
+	float: left;
+}

@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+#outer {
+	border: 2px solid black;
+	margin: auto;
+}
+
+#outer .a {
+	width:20px;
+	border: 2px solid black;
+	text-align: center;
+}
+
+#outer  .b {
+	border: 2px solid black;
+	text-align: center;
+}

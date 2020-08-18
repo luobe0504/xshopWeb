@@ -1,0 +1,159 @@
+@CHARSET "UTF-8";
+
+#Outer {
+	width: 1200px;
+	margin: auto;
+}
+/* 第一层 */
+#lay1 {
+	width: 1200px;
+	height: 50px;
+	background: RGB(51, 51, 51);
+}
+
+#lay1 .lay1_1 {
+	height: 50px;
+	width: 250px;
+	margin-left: 60px;
+	float: left;
+	line-height: 45px;
+	color: white;
+}
+
+#lay1 .lay1_2 {
+	height: 50px;
+	width: 160px;
+	background: red;
+	margin-right: 70px;
+	float: right;
+	text-align: center;
+	line-height: 45px;
+	font-size: 20px;
+	color: white;
+}
+
+#lay1 .lay1_3 {
+	height: 50px;
+	width: 160px;
+	margin-right: 20px;
+	float: right;
+	line-height: 45px;
+	color: white;
+}
+/* 第二层 */
+#lay2 {
+	height: 80px;
+	width: 1200px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+#lay2 .lay2_1 {
+	height: 80px;
+	width: 80px;
+	margin-left: 40px;
+	float: left;
+}
+
+#lay2 .lay2_1 img {
+	width: 80px;
+	height: 80px;
+}
+
+#lay2 .lay2_3 {
+	width: 300px;
+	height: 40px;
+	margin-right: 5px;
+	float: right;
+	margin-top: 20px;
+}
+
+#lay2 .lay2_2 {
+	width: 116px;
+	height: 46px;
+	margin-top: 10px;
+	margin-right: 20px;
+	float: right;
+}
+
+#lay2 .lay2_2 img {
+	width: 116px;
+	height: 46px;
+}
+/* 第三层 */
+#lay3 {
+	width: 1198px;
+	height: 380px;
+	margin-top:25px;
+	border: 1px black solid;
+}
+
+#lay3 .lay3_1 {
+	width: 1198;
+	height: 49px;
+	border-bottom: 1px black solid;
+	background: RGB(245, 245, 245);
+}
+
+#lay3 .lay3_1_1 {
+	width: 150px;
+	height: 50px;
+	float: left;
+	margin-left: 10px;
+	line-height: 50px;
+	font-size: 20px;
+}
+
+#lay3 .lay3_1_2 {
+	width: 150px;
+	height: 50px;
+	float: right;
+	margin-right: 15px;
+	line-height: 50px;
+	font-size: 15px;
+	color: RGB(51, 163, 215);
+}
+
+#lay3 .lay3_2 {
+	width: 1200px;
+	height: 80px;
+	line-height: 80px;
+	font-size: 28px;
+	margin-left: 15px;
+}
+
+#lay3 .lay3_3 {
+	width: 1200px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 38px;
+	margin-left: 15px;
+	color: RGB(169, 68, 66);
+}
+
+#lay3 .lay3_4 {
+	width: 1200px;
+	height: 100px;
+	border-top: 1px black solid;
+	margin-top: 100px;
+}
+
+#lay3 .lay3_4_1 {
+	width: 120px;
+	height: 60px;
+	background: RGB(240, 173, 78);
+	color: white;
+	float: right;
+	text-align: center;
+	line-height: 60px;
+	margin-top: 20px;
+	margin-right: 16px;
+}
+
+#lay4 {
+	width: 1200px;
+	margin-top: 40px;
+	font-size: 15px;
+	text-align: center;
+	margin-top: 155px;
+}
