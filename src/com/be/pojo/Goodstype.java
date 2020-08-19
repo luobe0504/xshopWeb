@@ -5,6 +5,13 @@ public class Goodstype {
 	private String gtname;
 	private Integer gtlevel;
 	private Integer gtparent;
+	private String gtpic;
+	public String getGtpic() {
+		return gtpic;
+	}
+	public void setGtpic(String gtpic) {
+		this.gtpic = gtpic;
+	}
 	public Goodstype() {
 		super();
 		// TODO Auto-generated constructor stub

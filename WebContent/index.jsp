@@ -14,13 +14,22 @@
 <link type="text/css" rel="stylesheet" href="static/css/index.css" />
 </head>
 <body>
-<script type="text/javascript" src="static/js/index.js"></script>
-<div id="mc" onmouseover="clearInterval(T)" onmouseout="T=setInterval('ff()',10);">
-<div class="circle" onmouseover="showImg(1)" >1</div>
-<div class="circle" onmouseover="showImg(2)">2</div>
-<div class="circle" onmouseover="showImg(3)">3</div>
-<div class="circle" onmouseover="showImg(4)">4</div>
-</div>
+	<script type="text/javascript" src="static/js/index.js"></script>
+	<div id="mc" onmouseover="clearInterval(T)"
+		onmouseout="T=setInterval('ff()',10);">
+		<div class="circle" onmouseover="showImg(1)">1</div>
+		<div class="circle" onmouseover="showImg(2)">2</div>
+		<div class="circle" onmouseover="showImg(3)">3</div>
+		<div class="circle" onmouseover="showImg(4)">4</div>
+	</div>
+	<div id="menu">
+		<c:forEach items="${gtlist}" var="goodstype">
+			<div class="items" onmouseover="showItems(1,${goodstype.gtid})" onmouseout="showItems(2)">${goodstype.gtname}</div>
+		</c:forEach>
+	</div >
+	<div id="showItem">
+	
+	</div>
 	<div id="show_outer">
 		<div id="show_lay1">
 			<div class="a">
@@ -36,16 +45,24 @@
 				<img src="static/img/search.png">
 			</div>
 		</div>
-		<div id="show_lay2" >
-			<!-- <img src="static/img/banner2.jpg" />-->	
+		<div id="show_lay2">
+			<!-- <img src="static/img/banner2.jpg" />-->
 			<div id="show_lay2_inner">
-			<div class="pic"><img src="static/img/banner2.jpg"/></div>
-			<div class="pic"><img src="static/img/nice1.jpg" /></div>
-			<div class="pic"><img src="static/img/nice2.jpg" /></div>
-			<div class="pic"><img src="static/img/nice3.jpg" /></div>
+				<div class="pic">
+					<img src="static/img/banner2.jpg" />
+				</div>
+				<div class="pic">
+					<img src="static/img/nice1.jpg" />
+				</div>
+				<div class="pic">
+					<img src="static/img/nice2.jpg" />
+				</div>
+				<div class="pic">
+					<img src="static/img/nice3.jpg" />
+				</div>
 			</div>
-			
-			</div>
+
+		</div>
 		<div id="show_lay3">
 			<div class="a">
 				<div class="pic">
@@ -77,15 +94,19 @@
 				<img src="static/img/pinghengche.jpg" />
 			</div>
 		</div>
-		<div id="show_font">小米明星产品|<a href="goods?action=selectPage">分页展示</a></div>
+		<div id="show_font">
+			小米明星产品|<a href="goods?action=selectPage">分页展示</a>
+		</div>
 		<div id="show_lay4">
 
 			<c:forEach var="goods" items="${glist}">
 				<div class="a">
 					<div class="pic a1">
-						<a href="goods?action=selectOne&id=${goods.gid}"><img src="${goods.gpicture }" /></a>
+						<a href="goods?action=selectOne&id=${goods.gid}"><img
+							src="${goods.gpicture }" /></a>
 					</div>
-					<div class="brand">${goods.gname }<%-- |<a href="goods?action=selectOne&id=${goods.gid}">修改</a>|<a href="goods?action=delete&id=${goods.gid}">删除</a>|<a href="goods?action=selectOne">添加</a> --%></div>
+					<div class="brand">${goods.gname }<%-- |<a href="goods?action=selectOne&id=${goods.gid}">修改</a>|<a href="goods?action=delete&id=${goods.gid}">删除</a>|<a href="goods?action=selectOne">添加</a> --%>
+					</div>
 					<div class="info">${goods.ginfo}</div>
 					<div class="price">￥${goods.gprice}</div>
 				</div>

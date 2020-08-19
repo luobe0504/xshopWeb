@@ -17,6 +17,31 @@
 	line-height:30px;
 	position:relative;
 }
+#menu{
+	width:200px;
+	height:400px;
+	position:absolute;
+	background-color: rgba(165,130,30,0.5);
+	/* left: 130px;
+	top:58px; */
+	
+}
+#menu .items{
+	width:180px;
+	height:40px;
+	border-bottom: 1px solid white;
+	line-height:40px;
+	padding-left:20px;
+	font-size:15px;
+	color:white;
+}
+#showItem{
+	width:300px;
+	height:400px;
+	position:absolute;
+	background-color: rgba(140,100,60,0.6);
+	display:none;
+}
 #show_outer {
 	margin: auto;
 	width: 1200px;

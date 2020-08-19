@@ -17,4 +17,10 @@ public class GoodstypeServiceImpl implements IGoodstypeService {
 		
 		return goodstypedao.selectAll();
 	}
+
+	@Override
+	public List<Goodstype> selectAllByid(int id) {
+		
+		return goodstypedao.selectAllByid(id);
+	}
 }

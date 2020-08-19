@@ -9,6 +9,12 @@ window.onload=function(){
 	circle[j].style.top=350-(j*30)+"px";
 	circle[j].style.left=950+(j*30)+"px";
 	}
+	r=lay2.getBoundingClientRect();
+	menu.style.top=r.top+"px";
+	menu.style.left=r.left+"px";
+	m=menu.getBoundingClientRect();
+	showItem.style.top=m.top+"px";
+	showItem.style.left=m.right+"px";
 }
 var i=0;
 function ff(){
@@ -28,4 +34,24 @@ function  showImg(x){
 			circle[x-1].style.backgroundColor="#ccc";
 		}
 	}*/
+}
+function showItems(x,y){
+	if(x==1){
+		showItem.style.display="block";
+		var xhr=new XMLHttpRequest();
+		xhr.open("get","goodstype?action=selectItem&id="+y);
+		xhr.send();
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4 && xhr.status==200){
+				var data= xhr.responseText;
+				data=JSON.parse(data);
+				for(var xb in data){
+					var d1=document.createElement("div");
+					
+				}
+			}
+		}
+	}else if(x==2){
+		showItem.style.display="none";
+	}
 }

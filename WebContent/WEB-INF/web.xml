@@ -20,4 +20,12 @@
     <servlet-name>GoodsControler</servlet-name>
     <url-pattern>/goods</url-pattern>
   </servlet-mapping>
+  <filter>
+    <filter-name>CharacterFilter</filter-name>
+    <filter-class>com.be.filter.CharacterFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CharacterFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
 </web-app>

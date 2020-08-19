@@ -48,7 +48,7 @@ public class GoodsControler extends BaseControler {
 			goods.setGpug(gpug);
 			request.setAttribute("goods", goods);
 		}
-		return "goodsDetail";
+		return "forward:goodsDetail";
 	}
 
 	protected String update(HttpServletRequest request, HttpServletResponse arg1) throws ServletException, IOException {
@@ -117,9 +117,9 @@ public class GoodsControler extends BaseControler {
 			request.setAttribute("pb", pb);
 			/*List<Goodstype> clist=goodstypeservice.selectAll();
 			request.setAttribute("clist", clist);*/
-			return "list";
+			return "forward:list";
 		} catch (NumberFormatException e) {
-			return "err";
+			return "forward:err";
 		}
 
 	}
@@ -130,7 +130,7 @@ public class GoodsControler extends BaseControler {
 		// 存储
 		request.setAttribute("glist", list);
 		
-		return "list";
+		return "forward:list";
 	}
 	protected String selectLike(HttpServletRequest request, HttpServletResponse arg1)
 			throws ServletException, IOException {
@@ -150,7 +150,7 @@ public class GoodsControler extends BaseControler {
 		request.setAttribute("search", search);
 		List<Goods> list = goodsservice.selectLike(search, pb);
 		request.setAttribute("plist", list);
-		return "list";
+		return "forward:list";
 
 	}
 }

@@ -8,8 +8,14 @@ public class GoodstypeDaoImpl extends BaseDao<Goodstype> implements IGoodstypeDa
 
 	@Override
 	public List<Goodstype> selectAll() {
-		String sql="select gt_id,gt_name,gt_level,gt_parent from goodstype";
+		String sql="select gt_id gtid,gt_name gtname,gt_level gtlevel,gt_parent gtparent,gtpic gtpic from goodstype where gt_level=1";
 		return queryAll(sql, Goodstype.class,null);
+	}
+
+	@Override
+	public List<Goodstype> selectAllByid(int id) {
+		String sql="select gt_id gtid,gt_name gtname,gt_level gtlevel,gt_parent gtparent,gtpic gtpic from goodstype where gt_parent=?";
+		return queryAll(sql, Goodstype.class,new Object[]{id});
 	}
 
 }
