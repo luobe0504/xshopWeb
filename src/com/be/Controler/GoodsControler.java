@@ -132,6 +132,21 @@ public class GoodsControler extends BaseControler {
 		
 		return "forward:list";
 	}
+	protected String selectcidLike(HttpServletRequest request, HttpServletResponse arg1)
+			throws ServletException, IOException {
+		String ps = request.getParameter("page");
+		int page = ps == null ? 1 : Integer.valueOf(ps);
+		String ids = request.getParameter("id");
+		int id = ids == null ? 0 : Integer.valueOf(ids);
+		pageBean pb = new pageBean();
+		pb.setRows(rows);
+		pb.setMrows(3);
+		pb.setPage(page);
+		request.setAttribute("pb", pb);
+		List<Goodstype> list = goodstypeservice.selectcidLike(id, pb);
+		request.setAttribute("plist", list);
+		return "forward:list";
+	}
 	protected String selectLike(HttpServletRequest request, HttpServletResponse arg1)
 			throws ServletException, IOException {
 		String ps = request.getParameter("page");

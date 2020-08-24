@@ -8,6 +8,7 @@ import com.be.dao.IGoodstypeDao;
 
 import com.be.daoImpl.GoodstypeDaoImpl;
 import com.be.pojo.Goodstype;
+import com.be.pojo.pageBean;
 
 public class GoodstypeServiceImpl implements IGoodstypeService {
 	private IGoodstypeDao goodstypedao =new GoodstypeDaoImpl();
@@ -22,5 +23,11 @@ public class GoodstypeServiceImpl implements IGoodstypeService {
 	public List<Goodstype> selectAllByid(int id) {
 		
 		return goodstypedao.selectAllByid(id);
+	}
+
+	@Override
+	public List<Goodstype> selectcidLike(int id, pageBean pb) {
+	
+		return goodstypedao.selectcidLike(id,pb);
 	}
 }

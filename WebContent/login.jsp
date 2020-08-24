@@ -7,6 +7,7 @@
 
 <link type="text/css" rel="stylesheet" href='static/css/login.css' />
 <!-- href="static/css/show.css" -->
+
 </head>
 <body>
 	<div id="outer">
@@ -27,7 +28,8 @@
 					</div>
 				</div>
 				<div id="d">
-					<form action="" method="post">
+					<form action="user" method="post">
+					<input type="hidden" name="action" value="login"/>
 						<div id="e">
 							<font color="aliceblue">用户名:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
 							<input type="text" name="username" placeholder="请输入你的用户名" />
@@ -50,7 +52,9 @@
 						</div>
 						<div id="g">
 							<input type="submit" value="立即登录" />
+							<span id="err">${error}</span>
 						</div>
+						
 					</form>
 				</div>
 			</div>

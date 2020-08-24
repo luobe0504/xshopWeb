@@ -38,7 +38,6 @@ public class BaseControler extends HttpServlet {
 					pw.write(oo);
 					pw.flush();
 				}
-
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

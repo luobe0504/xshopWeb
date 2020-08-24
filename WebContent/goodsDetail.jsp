@@ -22,7 +22,7 @@
 
 			<div class="lay1_2">购物车</div>
 
-			<div class="lay1_3">登录|注册|消息通知</div>
+			<div class="lay1_3">登录|注册|消息通知|<a href="user?action=logout" color="white">退出</a></div>
 		</div>
 		<!--第二层-->
 		<div id="lay2">
@@ -64,8 +64,9 @@
 			<div class="lay4_2">
 				<div class="lay4_2_1">商品详情</div>
 				<div class="lay4_2_2">
-					<font size="4px">产品名称：${goods.gname}</font><br> <br>市场价格：￥${goods.gprice}<br>上市时间：<f:formatDate value="${goods.gdate}" pattern="yyyy-MM-dd"/><br>热销指数：${goods.gstar}
-					<br>详细介绍：${goods.ginfo} <br>颜色：${goods.phyanse}<br>处理器：${goods.phchuliqi}<br>内存：${goods.phneicun}<br>版本：${goods.pnbanben}
+					<font size="4px">产品名称：${goods.gname}</font><br> <br>市场价格：￥${goods.gprice}<br>上市时间：
+					<f:formatDate value="${goods.gdate}" pattern="yyyy-MM-dd" />
+					<br>热销指数：${goods.gstar} <br>详细介绍：${goods.ginfo} <br>颜色：${goods.phyanse}<br>处理器：${goods.phchuliqi}<br>内存：${goods.phneicun}<br>版本：${goods.pnbanben}
 				</div>
 				<div class="lay4_2_3">
 					<div class="lay4_2_3_1" onclick="addCart(${goods.gid})">加入购物车</div>
@@ -76,7 +77,13 @@
 						xhr.send();//发送请求
 						xhr.onreadystatechange=function(){
 							if(xhr.readyState==4&&xhr.status==200){
-								
+							var res=xhr.responseText;
+							res=JSON.parse(res); 
+							
+							if(res.code==-1){
+								window.location.href="login.jsp";
+								return;
+							}	else{alert(res.data); }
 							}
 						}
 					}

@@ -40,7 +40,7 @@
 				</c:forEach></select> --%></td>
 				<td class="b">${goods.gname}</td>
 				<td class="b"><f:formatDate value="${goods.gdate}" pattern="yyyy-MM-dd"/></td>
-				<td class="b"><img src="${goods.gpicture}"></td>
+				<td class="b"><a href="goods?action=selectOne&id=${goods.gid}"></a><img src="${goods.gpicture}"></a></td>
 				<td class="b">${goods.gprice}</td>
 				<td class="b">${goods.gstar}</td>
 				<td class="b">${goods.ginfo}</td>

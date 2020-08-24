@@ -27,7 +27,7 @@ public class GoodsDaoImpl extends BaseDao implements IGoodsDao {
 	@Override
 	public Goods selectOne(int id) {
 		/* select g.*,gt.*,p.* from goods g,goodstype gt , phone p where g.gt_id=gt.gt_id and g.g_id=p.g_id;*/
-		String sql="select g_id gid,gt_id gtid,g_name gname,g_date gdate,g_picture gpicture,g_price gprice,g_star gstar,g_info ginfo from goods where g_id=?";
+		String sql="select g_id gid,gt_id gtid,g_name gname,g_date gdate,g_picture gpicture,g_price gprice,g_star gstar,g_info ginfo,gpic1 gpic1,gpic2 gpic2,gpic3 gpic3,gpic4 gpic4 from goods where g_id=?";
 		List list=queryAll(sql,Goods.class,new Object[]{id});
 		return (Goods) list.get(0);
 	}
