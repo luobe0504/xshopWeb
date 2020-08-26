@@ -27,7 +27,7 @@
 			<div class="items" onmouseover="showItems(1,${goodstype.gtid})" onmouseout="showItems(2)">${goodstype.gtname}</div>
 		</c:forEach>
 	</div >
-	<div id="showItem">
+	<div id="showItem" onmouseover="this.style.display='block'"><!--  onmouseout="this.style.display='none'" -->
 	
 	</div>
 	<div id="show_outer">

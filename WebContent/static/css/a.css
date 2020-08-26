@@ -11,7 +11,11 @@
 	text-align: center;
 }
 
-#outer  .b {
+#outer .b {
 	border: 2px solid black;
 	text-align: center;
+}
+#outer .img1 {
+	width:20px;
+	height:40px;
 }

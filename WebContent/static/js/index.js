@@ -50,9 +50,9 @@ function showItems(x, y) {
 				console.log(goodstype);
 					var d1 = document.createElement("div");
 					
-					d1.addEventListener("mouseover",function(){
+					/*d1.addEventListener("mouseover",function(){
 						showItems(1,y);
-					})
+					})*/
 					
 					
 					d1.style.width = "60px";
@@ -65,7 +65,7 @@ function showItems(x, y) {
 					d1_pic.style.height = "60px";
 					d1.appendChild(d1_pic);
 					var zhref=document.createElement("a");
-					zhref.href="goods?action=selectcidLike & id="+goodstype.gtid;
+					zhref.href="goodstype?action=selectcidLike&id="+goodstype.gtid;
 					
 					var img = document.createElement("img");
 					img.src = goodstype.gtpic;
@@ -88,9 +88,9 @@ function showItems(x, y) {
 		}
 	} else if (x == 2) {
 		showItem.style.display = "none";
-		d1.addEventListener("mouseout",function(){
+		/*d1.addEventListener("mouseout",function(){
 			showItems(2);
-		})
+		})*/
 		/*while(showItem.children.length>0){
 			showItem.removeChild(showItem.children[0]);
 		}*/
