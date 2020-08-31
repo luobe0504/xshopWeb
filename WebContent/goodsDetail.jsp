@@ -25,7 +25,7 @@
 
 			<div class="lay1_3">
 				<c:if test="${empty(sessionScope.user)}">
-					<a href="user?action=login" style="color: white;">登录</a>
+					<a href="login.jsp" style="color: white;">登录</a>
 				</c:if>
 				<c:if test="${!(empty(sessionScope.user))}">
 					${user.uname}

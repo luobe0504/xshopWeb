@@ -40,7 +40,7 @@
 				</c:forEach></select> --%></td>
 				<td class="b">${goods.gname}</td>
 				<td class="b"><f:formatDate value="${goods.gdate}" pattern="yyyy-MM-dd"/></td>
-				<td class="b"><a href="goods?action=selectOne&id=${goods.gid}"><img src="${goods.gpicture}"></a></td>
+				<td class="b"><a href="goods?action=selectOne&id=${goods.gid}"><img width="80" height="100" src="${goods.gpicture}"></a></td>
 				<td class="b">${goods.gprice}</td>
 				<td class="b">${goods.gstar}</td>
 				<td class="b">${goods.ginfo}</td>
@@ -55,7 +55,7 @@
 						<c:forEach begin="1" step="1" end="${pb.mpage}" var="p">
 							<c:if test="${pb.page==p}"> ${p}|</c:if>
 							<c:if test="${pb.page!=p}">
-								<a href="goods?action=selectLike&page=${p}&search=${search}"> ${p}|</a>
+								<a href="goodstype?action=selectcidLike&page=${p}&id=${id}"> ${p}|</a>
 							</c:if>
 						</c:forEach>
 					</c:when>
@@ -65,7 +65,7 @@
 								<c:forEach begin="1" step="1" end="3" var="p">
 									<c:if test="${pb.page==p}"> ${p}|</c:if>
 									<c:if test="${pb.page!=p}">
-										<a href="goods?action=selectLike&page=${p}&search=${search}"> ${p}|</a>
+										<a href="goodstype?action=selectcidLike&page=${p}&id=${id}"> ${p}|</a>
 									</c:if>
 								</c:forEach>
 							</c:when>
@@ -73,7 +73,7 @@
 								<c:forEach begin="${pb.mpage-2}" step="1" end="${pb.mpage}" var="p">
 									<c:if test="${pb.page==p}"> ${p}|</c:if>
 									<c:if test="${pb.page!=p}">
-										<a href="goods?action=selectLike&page=${p}&search=${search}"> ${p}|</a>
+										<a href="goodstype?action=selectcidLike&page=${p}&id=${id}"> ${p}|</a>
 									</c:if>
 								</c:forEach>
 							</c:when>
@@ -82,7 +82,7 @@
 									var="p">
 									<c:if test="${pb.page==p}"> ${p}|</c:if>
 									<c:if test="${pb.page!=p}">
-										<a href="goods?action=selectLike&page=${p}&search=${search}"> ${p}|</a>
+										<a href="goodstype?action=selectcidLike&page=${p}&id=${id}"> ${p}|</a>
 									</c:if>
 								</c:forEach>
 							</c:otherwise>
@@ -92,7 +92,7 @@
 		</tr>
 
 	</table>
-	<div>
+	<%-- <div>
 		<a href="goods?action=selectLike&page=1&search=${search}">首页</a>|
 		<c:choose>
 			<c:when test="${pb.page-1>=1}">
@@ -105,7 +105,7 @@
 			<c:otherwise>下页|</c:otherwise>
 		</c:choose>
 		<a href="goods?action=selectLike&page=${pb.mpage}&search=${search}">尾页</a>| 当前第
-		${pb.page} 页 |共${pb.mpage}页|每页显示${pb.rows}条
+		${pb.page} 页 |共${pb.mpage}页|每页显示${pb.rows}条  </div>--%>
 
 		<%-- <a href="User?action=selectPage&page=1">首页</a>|
 		<c:if test="${pb.page-1>=1}">
@@ -116,6 +116,6 @@
 		<c:if test="${pb.page+1>pb.mpage}">下页|</c:if>
 		<a href="User?action=selectPage&page=${pb.mpage}">尾页</a>| 当前第
 		${pb.page} 页 |共${pb.mpage}页|每页显示${pb.rows}条 --%>
-	</div>
+	
 </body>
 </html>

@@ -22,7 +22,8 @@ public class GoodstypeDaoImpl extends BaseDao<Goodstype> implements IGoodstypeDa
 
 	@Override
 	public List<Goodstype> selectcidLike(int id, pageBean pb) {
-		String sql="select g_id gid,gt_id gtid,g_name gname,g_date gdate,g_picture gpicture,g_price gprice,g_star gstar,g_info ginfo ,gpic1 gpic1,gpic2 gpic2,gpic3 gpic3,gpic4 gpic4 from goods where gt_id=? limit ?,?";
+		String sql="select g.g_id gid,g.gt_id gtid,g.g_name gname,g.g_date gdate,g.g_picture gpicture,g.g_price gprice,g.g_star gstar,g.g_info ginfo ,gt.gt_name gtname from goods g,goodstype gt where g.gt_id=gt.gt_id and g.gt_id=? limit ?,?";
+/*		String sql="select g_id gid,gt_id gtid,g_name gname,g_date gdate,g_picture gpicture,g_price gprice,g_star gstar,g_info ginfo ,gpic1 gpic1,gpic2 gpic2,gpic3 gpic3,gpic4 gpic4 from goods where gt_id=? limit ?,?";*/
 		Object[] obj=new Object[]{id,(pb.getPage()-1)*pb.getRows(),pb.getRows()};	
 		return queryAll(sql,Goods.class,obj);
 	}

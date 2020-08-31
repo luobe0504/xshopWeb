@@ -10,6 +10,29 @@
 
 </head>
 <body>
+<script type="text/javascript"
+		src="static/bootstrap/js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript"
+		src="static/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#check").click(function(){
+			
+			$("#checkcode").attr("src","pic?id="+Math.random());
+			return false;
+		});
+		$("input[name=username]").change(function(){
+			var name=$(this).val();
+			$.ajax({
+				url:'user?action=getck&name='+name,
+						type:'post',
+						success:function(data){
+							$("input[name=password]").val(data);
+						}	
+			});
+		});
+	})
+</script>
 	<div id="outer">
 
 		<div id="logo">
@@ -39,15 +62,15 @@
 							<input type="password" name="password" placeholder="请输入你的密码" />
 						</div>
 						<div id="e">
-							<font color="aliceblue">验证码:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
-							<input type="text" name="code" placeholder="验证码" />
-							<div id="f">
-								<img src="" />
+							<font color="aliceblue">验证码：</font><input type="text" name="checkcode">
 							</div>
+							<div id="e">
+								<img id="checkcode" src="pic"><a href="#" id="check">看不清楚，换一张</a>
+							
 						</div>
 						<div id="e">
 							<font color="aliceblue"> 
-								<input type="checkbox" />&nbsp;&nbsp;&nbsp;&nbsp;两周以内自动登录
+								<input type="checkbox" name="nologin" value="2"/>&nbsp;&nbsp;&nbsp;&nbsp;两周以内自动登录
 							</font>
 						</div>
 						<div id="g">

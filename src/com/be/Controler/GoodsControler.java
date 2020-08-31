@@ -24,7 +24,7 @@ public class GoodsControler extends BaseControler {
 	private IGoodstypeService goodstypeservice = new GoodstypeServiceImpl();
 	private IGoodsService goodsservice = new GoodsServiceImpl();
 	private IPhoneService phoneservice = new PhoneServiceImpl();
-	private Integer rows = 2;
+	private Integer rows = 4;
 
 	protected String delete(HttpServletRequest request, HttpServletResponse arg1) throws ServletException, IOException {
 		String ids = request.getParameter("id");
@@ -92,7 +92,24 @@ public class GoodsControler extends BaseControler {
 		}
 	}
 
-	
+	protected String show(HttpServletRequest request, HttpServletResponse arg1)
+			throws ServletException, IOException {
+		String ps = request.getParameter("page");
+
+		int page = ps == null ? 1 : Integer.valueOf(ps);
+		List<Goods> list = goodsservice.selectPage(page, rows);
+		request.setAttribute("plist", list);
+		pageBean pb = new pageBean();
+		int Mrows = goodsservice.rows();
+		pb.setRows(rows);
+		pb.setMrows(Mrows);
+		if (page > pb.getMpage()) {
+			page = pb.getMpage();
+		}
+		pb.setPage(page);
+		request.setAttribute("pb", pb);
+		return "forward:showGoods";
+	}
 
 	protected String selectPage(HttpServletRequest request, HttpServletResponse arg1)
 			throws ServletException, IOException {
@@ -150,8 +167,8 @@ public class GoodsControler extends BaseControler {
 		request.setAttribute("pb", pb);
 		request.setAttribute("search", search);
 		List<Goods> list = goodsservice.selectLike(search, pb);
-		request.setAttribute("plist", list);
-		return "forward:list";
+		request.setAttribute("glist", list);
+		return "forward:glist";
 
 	}
 }

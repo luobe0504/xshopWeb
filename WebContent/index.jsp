@@ -42,7 +42,7 @@
 				<input type="text" name="search" placeholder="搜索内容" />
 			</div>
 			<div class="a c">
-				<img src="static/img/search.png">
+				<a href="goods?action=selectLike&search=${ }"><img src="static/img/search.png"></a>
 			</div>
 		</div>
 		<div id="show_lay2">
